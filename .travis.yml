@@ -1,0 +1,18 @@
+language: python
+python:
+  - "3.6"
+env:
+  - DJANGO=1.11.0
+
+services: mysql
+
+install:
+  - pip install -r requirements.txt
+
+before_script:
+  - mysql -uroot -e 'CREATE DATABASE IF NOT EXISTS fms DEFAULT CHARSET utf8 COLLATE utf8_general_ci;;'
+  - python manage.py makemigrations
+  - python manage.py migrate
+
+script:  
+    - python manage.py test 
