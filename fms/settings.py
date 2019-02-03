@@ -167,5 +167,5 @@ ZABBIX_DB_NAME = 'zabbix'
 ZABBIX_SYNC_INTERVAL = 600  # 10分钟
 
 CRONJOBS = [
-    #('* * * * *','task.task.task',[],{},'>> /var/tmp/run.log'),
+    #('* * * * *','task.task.task',[],{},'>> /var/tmp/run.log')
 ]
